@@ -1,0 +1,216 @@
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+@keyframes marquee {
+    0% { transform: translateY(32.5%); }
+    100% { transform: translateY(-100%); }
+  }
+  
+  .marquee-container {
+    height: 200px; /* Adjust height as needed */
+    overflow: hidden;
+  }
+  
+  .marquee {
+    /* display: inline-block; */
+    /* white-space: nowrap; */
+    animation: marquee 20s linear infinite;
+  }
+  
+  .marquee:hover {
+    animation-play-state: paused;
+  }
+  .active
+  {
+    color: red;
+  }
+  .progress-bar {
+    height: 5px;
+    /* border-radius:0 0 5px 0; */
+    background: linear-gradient(101.8deg, rgb(28, 28, 224) -0.2%, rgb(153, 68, 230) 55.2%, rgb(235, 18, 180) 84.4%);
+    /* background: radial-gradient(328px at 2.9% 15%, rgb(191, 224, 251) 0%, rgb(232, 233, 251) 25.8%, rgb(252, 239, 250) 50.8%, rgb(234, 251, 251) 77.6%, rgb(240, 251, 244) 100.7%); */
+    animation: lightReflection 2s ease-in-out infinite;
+    width: 100%;
+    transition: width 3s linear;
+  }
+  
+  .toast {
+    position: fixed;
+    right: 20px;
+    color: #fff;
+    border-radius: 5px;
+    margin-right:-10%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s ease; 
+  }
+  #toast{
+    z-index: 999 !important;
+
+  }
+  .toast.success
+  {
+
+    background: radial-gradient(circle at 12.3% 19.3%, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%);
+  }
+  .toast.error
+  {
+
+    background: linear-gradient(98.3deg, rgb(0, 0, 0) 10.6%, rgb(255, 0, 0) 97.7%);
+  }
+  #toastStatus.success{
+    padding: 5px 10px;
+    --tw-border-opacity: 1;
+    border-color: rgb(74 222 128 / var(--tw-border-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(74 222 128 / var(--tw-text-opacity));
+    
+  }
+  #toastStatus.error{
+    padding: 5px 12px;
+    --tw-border-opacity: 1;
+    border-color: rgb(220 38 38 / var(--tw-border-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(220 38 38 / var(--tw-text-opacity));
+
+  }
+  
+  .toast.show {
+    opacity: 1;
+    margin-right:0;
+    visibility: visible;
+  }
+  
+  .toast-message {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+ 
+  
+
+  .form-group label{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    transition: all 0.3s;
+    color: #999;
+    font-weight: normal;
+    cursor: text;
+  }
+  .form-control:focus~label{
+    left: 5px;
+    top: -10px;
+    color: black;
+    padding: 0 3px;
+    /* background: rgb(243 244 246); */
+    
+  }
+  .form-label.active{
+    left: 5px;
+    top: -10px;
+    color: black;
+    padding: 0 3px;
+    /* background: rgb(243 244 246); */
+
+  }
+
+
+  /* hero swiper */
+  
+.hero-swiper {
+  width: 100%;
+}
+
+
+.hero-swiper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+.hero-swiper .swiper-slide img{
+  transition: all 15s;
+}
+
+.hero-swiper .swiper-slide-active img{
+  scale: 1.25;
+}
+
+.hero-swiper  .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-swiper-pagination .swiper-pagination-bullet{
+    height: 10px !important;
+    width: 10px !important;
+    background-color: white !important;
+    opacity: 1 !important;
+    transition: all 0.5s ease;
+    border-radius: 5px !important;
+  }
+  
+  .hero-swiper-pagination .swiper-pagination-bullet-active{
+  width: 30px !important;
+}
+
+.hero-swiper-button-prev[aria-disabled="true"] {
+  opacity: 0.5 !important;
+  pointer-events: none;
+}
+.hero-swiper-button-next[aria-disabled="true"] {
+  opacity: 0.5 !important;
+  pointer-events: none;
+}
+
+
+  /* blog */
+.card .img-div{
+  position: relative;
+  overflow: hidden;
+}
+
+.card .img-div::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  z-index: 2;
+  display: block;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient( to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100% );
+  transform: skewX(-25deg);
+}
+
+.card .img-div:hover::before{
+  animation: shine 800ms;
+}
+
+@-webkit-keyframes shine {
+  100% {
+      left: 125%;
+  }
+}
+@-moz-keyframes shine {
+  100% {
+      left: 125%;
+  }
+}
+@-ms-keyframes shine {
+  100% {
+      left: 125%;
+  }
+}
+@keyframes shine {
+  100% {
+      left: 125%;
+  }
+}
+
+
+
+
+/* cart-section css */
